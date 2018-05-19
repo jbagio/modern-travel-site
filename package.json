@@ -1,0 +1,27 @@
+{
+  "name": "modern-travel-site",
+  "version": "1.0.0",
+  "description": "Demo travel site built using a modern webdev toolset",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbagio/modern-travel-site.git"
+  },
+  "author": "João Bagio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbagio/modern-travel-site/issues"
+  },
+  "homepage": "https://github.com/jbagio/modern-travel-site#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11"
+  }
+}
