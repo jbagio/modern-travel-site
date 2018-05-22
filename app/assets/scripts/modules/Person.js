@@ -1,8 +1,10 @@
-function Person (name) {
-  this.name = name;
-  this.greet = () => {
-    console.log(`Sup, diz is ${this.name}.`);
-  };
+class Person {
+  constructor (name) {
+    this.name = name;
+  }
+  greet () {
+    console.log(`Sup, diz is ${this.name} rocking babel.`);
+  }
 }
 
-module.exports = Person;
+export default Person;

@@ -67,31 +67,86 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-//////// TESTING STUFF
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _Person2 = __webpack_require__(1);
+
+var _Person3 = _interopRequireDefault(_Person2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //////// TESTING STUFF
 //////// TO BE REMOVED IN A LATER LECTURE
 
-const Person = __webpack_require__(1);
+//const Person = require('./modules/Person');
 
-const person1 = new Person('Mistah Frodo');
-const person2 = new Person('Mike Morangoz');
 
+var person1 = new _Person3.default('Mistah Frodo');
 person1.greet();
-person2.greet();
 
+var TaxPayer = function (_Person) {
+  _inherits(TaxPayer, _Person);
+
+  function TaxPayer() {
+    _classCallCheck(this, TaxPayer);
+
+    return _possibleConstructorReturn(this, (TaxPayer.__proto__ || Object.getPrototypeOf(TaxPayer)).apply(this, arguments));
+  }
+
+  _createClass(TaxPayer, [{
+    key: 'payTaxes',
+    value: function payTaxes() {
+      console.log(this.name + ' is now a slave to the system.');
+    }
+  }]);
+
+  return TaxPayer;
+}(_Person3.default);
+
+var person2 = new TaxPayer('Uncle Baggins');
+person2.greet();
+person2.payTaxes();
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function Person (name) {
-  this.name = name;
-  this.greet = () => {
-    console.log(`Sup, diz is ${this.name}.`);
-  };
-}
+"use strict";
 
-module.exports = Person;
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Person = function () {
+  function Person(name) {
+    _classCallCheck(this, Person);
+
+    this.name = name;
+  }
+
+  _createClass(Person, [{
+    key: "greet",
+    value: function greet() {
+      console.log("Sup, diz is " + this.name + " rocking babel.");
+    }
+  }]);
+
+  return Person;
+}();
+
+exports.default = Person;
 
 /***/ })
 /******/ ]);
