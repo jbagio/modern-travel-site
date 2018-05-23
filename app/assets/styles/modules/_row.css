@@ -94,26 +94,26 @@
     }
   }
 
-  &--eq-height-at-medium {
+  .flexbox &--eq-height-at-medium {
     @mixin atMedium {
       display:flex;
     }
-  }
 
-  &--eq-height-at-medium > div {
-    float: none;
-    display: flex
-  }
-
-  &--eq-height-at-large {
-    @mixin atLarge {
-      display:flex;
+    & > div {
+      float: none;
+      display: flex
     }
   }
 
-  &--eq-height-at-large > div {
-    float: none;
-    display: flex
+  .flexbox &--eq-height-at-large {
+    @mixin atLarge {
+      display:flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex
+    }
   }
 
 }
